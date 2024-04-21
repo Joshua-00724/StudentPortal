@@ -25,6 +25,7 @@ namespace StudentPortal.Controllers
 
         public async Task<IActionResult> Add(AddStudentViewModel viewModel)
         {
+            ModelState.Clear();
             var student = new Student
             {
                 SID = viewModel.SID,
@@ -38,6 +39,8 @@ namespace StudentPortal.Controllers
             };
             await dbContext.Students.AddAsync(student);
             await dbContext.SaveChangesAsync();
+
+            TempData["AlertMessage"] = "Record has been created";
 
             return View();
         }
@@ -75,9 +78,13 @@ namespace StudentPortal.Controllers
                 student.BirthDate = viewModel.BirthDate;
 
                 await dbContext.SaveChangesAsync();
-            }
+                
 
+            }
+            TempData["AlertMessage"] = "Record has been updated";
             return RedirectToAction("Display", "Students");
+            
+
 
         }
 
@@ -91,7 +98,9 @@ namespace StudentPortal.Controllers
             {
                 dbContext.Students.Remove(viewModel);
                 await dbContext.SaveChangesAsync();
+                
             }
+            TempData["AlertMessage"] = "Record has been deleted";
             return RedirectToAction("Display", "Students");
         }
     }

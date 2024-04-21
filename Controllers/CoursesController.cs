@@ -24,6 +24,7 @@ namespace StudentPortal.Controllers
 
         public async Task<IActionResult> Addcourse(AddCourseViewModel viewModel)
         {
+            ModelState.Clear();
             var course = new Course
             {
                 CourseID = viewModel.CourseID,
@@ -32,8 +33,20 @@ namespace StudentPortal.Controllers
             await dbContext.Courses.AddAsync(course);
             await dbContext.SaveChangesAsync();
 
+            TempData["AlertMessage"] = "Course has been created";
+
             return View();
         }
+
+       /* [HttpPost]
+
+        public async Task<IActionResult> DisplayList()
+        {
+           var grades = new Grade
+            {
+
+            }.
+        }*/
 
 
     }

@@ -7,6 +7,13 @@
 @model StudentPortal.Models.Entities.Student
 <h1>Edit Student</h1>
 
+@if (TempData["AlertMessage"] != null)
+{
+    <div class="alert alert-success">
+        <strong>Sucess!</strong> @TempData["AlertMessage"]
+    </div>
+}
+
 @if (Model is null)
 {
     <p>No student was found with this ID</p>
@@ -69,7 +76,7 @@ else
         <button type="submit" class="btn btn-primary">SAVE</button>
     
         <button type="submit" class="btn btn-danger ms-3" asp-action="Delete" asp-controller="Students">DELETE</button>
-
-        </div>
+      </div>     
 </form>
 }
+

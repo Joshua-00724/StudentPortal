@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\StudentPortal.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\StyleSheet.scss",
+      "PackagePath": "staticwebassets\\css\\StyleSheet.scss"
+    },
+    {
       "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

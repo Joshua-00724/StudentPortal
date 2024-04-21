@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6V/3TTPn7Ak8JonJ8W4SgI9WGSZ69HNSO6+9FghUQpc=",
+  "Hash": "VPwog8BHFJpCEQtJjLyekqe6llov3Zzxdff2rITtkE8=",
   "Source": "StudentPortal",
   "BasePath": "_content/StudentPortal",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\StyleSheet.scss",
+      "SourceId": "StudentPortal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\",
+      "BasePath": "_content/StudentPortal",
+      "RelativePath": "css/StyleSheet.scss",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\StyleSheet.scss"
     },
     {
       "Identity": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\favicon.ico",

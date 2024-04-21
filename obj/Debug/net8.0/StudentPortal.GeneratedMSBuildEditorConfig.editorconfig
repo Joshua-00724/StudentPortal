@@ -18,16 +18,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\joshu\source\repos\StudentPortal\StudentPortal
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/joshu/source/repos/StudentPortal/StudentPortal/Views/Courses/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xBZGQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/joshu/source/repos/StudentPortal/StudentPortal/Views/Courses/Addcourse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xBZGRjb3Vyc2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/joshu/source/repos/StudentPortal/StudentPortal/Views/Grades/Addgrade.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhZGVzXEFkZGdyYWRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/joshu/source/repos/StudentPortal/StudentPortal/Views/Grades/DisplayList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhZGVzXERpc3BsYXlMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/joshu/source/repos/StudentPortal/StudentPortal/Views/Home/Index.cshtml]
