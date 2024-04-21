@@ -1,0 +1,75 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model StudentPortal.Models.Entities.Student
+<h1>Edit Student</h1>
+
+@if (Model is null)
+{
+    <p>No student was found with this ID</p>
+}
+else
+{
+ 
+<form class="row g-3" method="post">
+    <div class="col-md-6">
+        <label for="inputName" class="form-label">Student ID</label>
+        <input type="number" class="form-control" id="sid" asp-for="SID" readonly/>
+    </div>
+    <div class="col-md-6">
+        <label for="inputFirstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="fname" asp-for="FName" />
+    </div>
+    <div class="col-12">
+        <label for="inputLastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lname" asp-for="LName" />
+    </div>
+    <div class="col-12">
+        <label for="inputEmail" class="col-sm-2 col-form-label">Email Address</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="Email" asp-for="Email" />
+        </div>
+    </div>
+    <p> </p>
+    <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Gender" id="gridRadios1" value="Male" checked>
+                <label class="form-check-label" for="gridRadios1">
+                    Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Gender" id="gridRadios2" value="Female">
+                <label class="form-check-label" for="gridRadios2">
+                    Female
+                </label>
+            </div>
+
+        </div>
+    </fieldset>
+    <div class="col-md-6">
+        <label for="inputPhone" class="form-label">Phone No.</label>
+        <input type="number" class="form-control" id="phone" asp-for="Phone">
+    </div>
+    <div class="col-md-6">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="address" asp-for="Address" />
+    </div>
+    <div class="col-md-12">
+        <label for="inputBirth" class="form-label">Birth Date</label>
+        <input type="date" class="form-control" id="indate" asp-for="BirthDate">
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">SAVE</button>
+    
+        <button type="submit" class="btn btn-danger ms-3" asp-action="Delete" asp-controller="Students">DELETE</button>
+
+        </div>
+</form>
+}

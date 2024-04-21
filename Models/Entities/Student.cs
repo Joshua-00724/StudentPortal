@@ -1,18 +1,23 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StudentPortal.Models.Entities
 {
     public class Student
     {
         [Key]
-        public int SID { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int SID { get; set; } 
+        
         public string FName { get; set; }
 
         public string LName { get; set; }
 
         public string Email { get; set; }
 
-        public char Gender {  get; set; }
+        public string Gender {  get; set; }
         public string Phone { get; set; }
         public string Address {  get; set; }
 
@@ -20,6 +25,6 @@ namespace StudentPortal.Models.Entities
 
         public ICollection<Grade> Grades { get; set; }
 
-
+       
     }
 }

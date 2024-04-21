@@ -15,8 +15,7 @@ namespace StudentPortal.Migrations
                 name: "Courses",
                 columns: table => new
                 {
-                    CourseID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CourseID = table.Column<int>(type: "int", nullable: false),
                     CourseName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -28,14 +27,13 @@ namespace StudentPortal.Migrations
                 name: "Students",
                 columns: table => new
                 {
-                    SID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SID = table.Column<int>(type: "int", nullable: false),
+                    FName = table.Column<string>(type: "nvarchar(20)", nullable: false),
+                    LName = table.Column<string>(type: "nvarchar(20)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Gender = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Gender = table.Column<string>(type: "nvarchar(10)", nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(10)", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(40)", nullable: false),
                     BirthDate = table.Column<DateOnly>(type: "date", nullable: false)
                 },
                 constraints: table =>
@@ -47,12 +45,11 @@ namespace StudentPortal.Migrations
                 name: "Grades",
                 columns: table => new
                 {
-                    GID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    GID = table.Column<int>(type: "int", nullable: false),
                     SID = table.Column<int>(type: "int", nullable: false),
                     CourseID = table.Column<int>(type: "int", nullable: false),
                     Score = table.Column<int>(type: "int", nullable: false),
-                    
+                   // StudentSID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -64,7 +61,7 @@ namespace StudentPortal.Migrations
                         principalColumn: "CourseID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Grades_Students_SID",
+                        name: "FK_Grades_Students_StudentSID",
                         column: x => x.SID,
                         principalTable: "Students",
                         principalColumn: "SID",
