@@ -41,23 +41,20 @@ namespace StudentPortal.Migrations
                     b.Property<int>("GID")
                         .HasColumnType("int");
 
-                    b.Property<int>("CourseID")
-                        .HasColumnType("int");
-
                     b.Property<int>("SID")
                         .HasColumnType("int");
+
+                    b.Property<int>("CourseID")
+                       .HasColumnType("int");
 
                     b.Property<int>("Score")
                         .HasColumnType("int");
 
-                    b.Property<int>("StudentSID")
-                        .HasColumnType("int");
-
                     b.HasKey("GID");
 
-                    b.HasIndex("CourseID");
+                    b.HasIndex("SID");
 
-                    b.HasIndex("StudentSID");
+                    b.HasIndex("CourseID");
 
                     b.ToTable("Grades");
                 });
@@ -109,7 +106,7 @@ namespace StudentPortal.Migrations
 
                     b.HasOne("StudentPortal.Models.Entities.Student", "Student")
                         .WithMany("Grades")
-                        .HasForeignKey("StudentSID")
+                        .HasForeignKey("SID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

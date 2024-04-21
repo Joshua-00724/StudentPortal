@@ -49,7 +49,7 @@ namespace StudentPortal.Migrations
                     SID = table.Column<int>(type: "int", nullable: false),
                     CourseID = table.Column<int>(type: "int", nullable: false),
                     Score = table.Column<int>(type: "int", nullable: false),
-                   // StudentSID = table.Column<int>(type: "int", nullable: false)
+                   
                 },
                 constraints: table =>
                 {
@@ -61,7 +61,7 @@ namespace StudentPortal.Migrations
                         principalColumn: "CourseID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Grades_Students_StudentSID",
+                        name: "FK_Grades_Students_SID",
                         column: x => x.SID,
                         principalTable: "Students",
                         principalColumn: "SID",
@@ -74,7 +74,7 @@ namespace StudentPortal.Migrations
                 column: "CourseID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Grades_StudentSID",
+                name: "IX_Grades_SID",
                 table: "Grades",
                 column: "SID");
         }
