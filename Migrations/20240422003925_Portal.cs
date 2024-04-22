@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace StudentPortal.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class Portal : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -27,18 +27,18 @@ namespace StudentPortal.Migrations
                 name: "Students",
                 columns: table => new
                 {
-                    SID = table.Column<int>(type: "int", nullable: false),
-                    FName = table.Column<string>(type: "nvarchar(20)", nullable: false),
-                    LName = table.Column<string>(type: "nvarchar(20)", nullable: false),
+                    StudentID = table.Column<int>(type: "int", nullable: false),
+                    FName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Gender = table.Column<string>(type: "nvarchar(10)", nullable: false),
-                    Phone = table.Column<string>(type: "nvarchar(10)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(40)", nullable: false),
+                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BirthDate = table.Column<DateOnly>(type: "date", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Students", x => x.SID);
+                    table.PrimaryKey("PK_Students", x => x.StudentID);
                 });
 
             migrationBuilder.CreateTable(
@@ -46,10 +46,9 @@ namespace StudentPortal.Migrations
                 columns: table => new
                 {
                     GID = table.Column<int>(type: "int", nullable: false),
-                    SID = table.Column<int>(type: "int", nullable: false),
+                    StudentID = table.Column<int>(type: "int", nullable: false),
                     CourseID = table.Column<int>(type: "int", nullable: false),
-                    Score = table.Column<int>(type: "int", nullable: false),
-                   
+                    Score = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -61,10 +60,10 @@ namespace StudentPortal.Migrations
                         principalColumn: "CourseID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Grades_Students_SID",
-                        column: x => x.SID,
+                        name: "FK_Grades_Students_StudentID",
+                        column: x => x.StudentID,
                         principalTable: "Students",
-                        principalColumn: "SID",
+                        principalColumn: "StudentID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -74,9 +73,9 @@ namespace StudentPortal.Migrations
                 column: "CourseID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Grades_SID",
+                name: "IX_Grades_StudentID",
                 table: "Grades",
-                column: "SID");
+                column: "StudentID");
         }
 
         /// <inheritdoc />

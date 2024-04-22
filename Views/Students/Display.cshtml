@@ -4,7 +4,12 @@
 @{
 }
 @model List<StudentPortal.Models.Entities.Student>
-<h1>All Students</h1>
+<div class="text-center">
+<h1 class="display-5">All Students</h1>
+</div>
+<a class="btn btn-success" asp-controller="Students" asp-action="Add">+ ADD</a>
+<br />
+<br />
 
 @if (TempData["AlertMessage"] != null)
 {
@@ -12,7 +17,7 @@
         <strong>Success!</strong> @TempData["AlertMessage"]
     </div>
 } 
-<table class="table">
+<table class="table table-success table-striped">
     <thead>
         <tr>
             <th>StudentID</th>
@@ -30,7 +35,7 @@
         @foreach (var student in Model)
         {
             <tr>
-             <td>@student.SID</td>
+             <td>@student.StudentID</td>
              <td>@student.FName</td>
              <td>@student.LName</td>
              <td>@student.Email</td>
@@ -39,7 +44,7 @@
              <td>@student.Address</td>
              <td>@student.BirthDate</td>
              <td>
-                 <a class ="btn btn-primary" asp-controller="Students" asp-action="Edit" asp-route-sid="@student.SID">EDIT</a>
+                 <a class ="btn btn-primary" asp-controller="Students" asp-action="Edit" asp-route-sid="@student.StudentID">EDIT</a>
              </td>
         </tr>
         }

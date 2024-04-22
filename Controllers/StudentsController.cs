@@ -28,7 +28,7 @@ namespace StudentPortal.Controllers
             ModelState.Clear();
             var student = new Student
             {
-                SID = viewModel.SID,
+                StudentID = viewModel.StudentID,
                 FName = viewModel.FName,
                 LName = viewModel.LName,
                 Email = viewModel.Email,
@@ -65,7 +65,7 @@ namespace StudentPortal.Controllers
 
         public async Task<IActionResult> Edit(Student viewModel)
         {
-            var student = await dbContext.Students.FindAsync(viewModel.SID);
+            var student = await dbContext.Students.FindAsync(viewModel.StudentID);
 
             if (student is not null)
             {
@@ -84,15 +84,13 @@ namespace StudentPortal.Controllers
             TempData["AlertMessage"] = "Record has been updated";
             return RedirectToAction("Display", "Students");
             
-
-
         }
 
         [HttpPost]
 
         public async Task<IActionResult> Delete(Student viewModel)
         {
-            var student = await dbContext.Students.AsNoTracking().FirstOrDefaultAsync(a => a.SID == viewModel.SID);
+            var student = await dbContext.Students.AsNoTracking().FirstOrDefaultAsync(a => a.StudentID == viewModel.StudentID);
 
             if (student is not null)
             {

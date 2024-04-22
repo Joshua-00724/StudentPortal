@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model StudentPortal.Models.Entities.Grade
+
+<h1> Edit Scores</h1>
+
+@if (TempData["AlertMessage"] != null)
+{
+    <div class="alert alert-success">
+        <strong>Sucess!</strong> @TempData["AlertMessage"]
+    </div>
+}
+
+@if (Model is null)
+{
+    <p>This ID was not found</p>
+}
+
+else
+{
+    <form class="row g-3" method="post">
+        <div class="col-md-6">
+            <label for="inputGrades" class="form-label">Grade ID</label>
+            <input type="number" class="form-control" id="gid" asp-for="GID" readonly/>
+        </div>
+        <div class="col-md-6">
+            <label for="inputSID" class="form-label">Student ID</label>
+            <input type="number" class="form-control" id="sid" asp-for="StudentID" readonly/>
+        </div>
+        <div class="col-md-12">
+            <label for="inputcid" class="form-label">Course ID</label>
+            <input type="number" class="form-control" id="cid" asp-for="CourseID" required />
+        </div>
+        <div class="col-md-12">
+            <label for="inputScore" class="form-label">Score</label>
+            <input type="number" class="form-control" id="score" asp-for="Score" required />
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn btn-danger ms-3" asp-action="Delete" asp-controller="Grades">DELETE</button> 
+        </div>
+    </form>
+}

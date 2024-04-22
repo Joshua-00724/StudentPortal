@@ -3,7 +3,7 @@
     public class AddStudentViewModel
     {
 
-        public int SID { get; set; }
+        public int StudentID { get; set; }
         public string FName { get; set; }
 
         public string LName { get; set; }

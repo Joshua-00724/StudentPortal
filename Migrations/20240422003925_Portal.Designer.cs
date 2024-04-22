@@ -12,8 +12,8 @@ using StudentPortal.Data;
 namespace StudentPortal.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240420223900_Initial")]
-    partial class Initial
+    [Migration("20240422003925_Portal")]
+    partial class Portal
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,25 +47,24 @@ namespace StudentPortal.Migrations
                     b.Property<int>("CourseID")
                         .HasColumnType("int");
 
-                    b.Property<int>("SID")
-                        .HasColumnType("int");
-
                     b.Property<int>("Score")
                         .HasColumnType("int");
 
-                  
+                    b.Property<int>("StudentID")
+                        .HasColumnType("int");
 
                     b.HasKey("GID");
 
                     b.HasIndex("CourseID");
-                    b.HasIndex("SID");
-                    
+
+                    b.HasIndex("StudentID");
+
                     b.ToTable("Grades");
                 });
 
             modelBuilder.Entity("StudentPortal.Models.Entities.Student", b =>
                 {
-                    b.Property<int>("SID")
+                    b.Property<int>("StudentID")
                         .HasColumnType("int");
 
                     b.Property<string>("Address")
@@ -95,7 +94,7 @@ namespace StudentPortal.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("SID");
+                    b.HasKey("StudentID");
 
                     b.ToTable("Students");
                 });
@@ -110,7 +109,7 @@ namespace StudentPortal.Migrations
 
                     b.HasOne("StudentPortal.Models.Entities.Student", "Student")
                         .WithMany("Grades")
-                        .HasForeignKey("SID")
+                        .HasForeignKey("StudentID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

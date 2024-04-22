@@ -9,7 +9,7 @@ namespace StudentPortal.Models.Entities
         [Key]
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int SID { get; set; } 
+        public int StudentID { get; set; } 
         
         public string FName { get; set; }
 

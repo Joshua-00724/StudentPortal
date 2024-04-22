@@ -4,7 +4,9 @@
 @{
 }
 @model List<StudentPortal.Models.Entities.Grade>
-<h1>All Student Marks</h1>
+<div class="text-center">
+<h1 class="display-5">Student Marks</h1>
+</div>
 @if (TempData["AlertMessage"] != null)
 {
     <div class="alert alert-success">
@@ -12,7 +14,7 @@
     </div>
 }
 
-<table class="table">
+<table class="table table-success table-striped">
     <thead>
         <tr>
             <th>Grade ID</th>
@@ -27,12 +29,12 @@
         {
             <tr>
                 <td>@grade.GID</td>
-                <td>@grade.SID</td>
+                <td>@grade.StudentID</td>
                 <td>@grade.CourseID</td>
                 <td>@grade.Score</td>
 
                 <td>
-                    <a class="btn btn-primary" asp-controller="Grades" asp-action="EditList" asp-route-sid="@grade.GID">EDIT</a>
+                    <a class="btn btn-primary" asp-controller="Grades" asp-action="EditList" asp-route-gid="@grade.GID">EDIT</a>
                 </td>
             </tr>
         }
