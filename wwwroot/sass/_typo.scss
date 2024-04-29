@@ -1,0 +1,154 @@
+﻿html {
+    font-size: 16px;
+}
+
+form.row{
+    background-color: #4cff0069;
+    width: 850px;
+    height: 700px;
+    position: center;
+    margin: 3% auto;
+    padding: 10px;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #000000;
+ }
+
+
+.super
+{
+    text-align: center;
+    padding: 20px;
+
+}
+
+.inputCourseName
+{
+    text-align: center;
+    padding: 30px;
+}
+
+div.form
+{
+    align-items:center;
+    font-size: 20px;
+
+}
+// GRADES - Display
+div.disp 
+{
+    background-color: #4cff007f;
+    padding: 10px 10px;
+    width: 600px; 
+    margin: 2% auto;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+//GRADES - Addgrade
+div.grade 
+{
+    background-color: #4cff007f;
+    padding: 10px 10px;
+    width: 380px;
+    height: 360px;
+    margin: 4% auto;
+    font-family: sans-serif;
+    font-weight: bold;
+    align-content: center;
+    align-items: stretch;
+    right: 50px;
+    top: -100px;
+    
+   
+}
+
+label.form-label
+{
+    width: 300px;
+    height: 10px;
+   // display: inline-block;
+    padding: 2px;
+    text-align: center;
+    display: inline-block;
+}
+
+input.form-control 
+{
+    width: 340px;
+    padding: 4px;
+    display: inline-block;
+    top: 60px;
+}
+
+button.btn {
+    padding: 10px 6px;
+    // margin-bottom: 5rem;
+    display: inline-block;
+    margin-right: 10px;
+    width: 70px;
+}
+
+// GRADES - EditList
+
+form.editform
+{
+ background-color: #4cff0069;
+ display: inline-block;
+    width: 400px;
+    height: 450px;
+    position: relative;
+    margin: 2% auto;
+   padding: 40px 20px;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #000000;
+    align-content: center;
+    top: 20px;
+    margin-top: 0;
+    margin-right: 5px;
+    left: 350px;
+   }
+
+button.gradebtn {
+    padding: 10px 6px;
+    // margin-bottom: 5rem;
+    display: inline-block;
+    margin-right: 10px;
+    width: 80px;
+    position: center;
+    
+}
+
+
+
+
+
+form.Join {
+    background-color: #4cff0069;
+    width: 300px;
+    height: 300px;
+    position: center;
+    margin: 4% auto;
+    padding: 10px;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    align-items: center;
+ }
+
+h1{
+    text-align: center;
+    
+    }
+
+h2{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    
+}

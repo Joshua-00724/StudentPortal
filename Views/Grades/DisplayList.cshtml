@@ -4,9 +4,8 @@
 @{
 }
 @model List<StudentPortal.Models.Entities.Grade>
-<div class="text-center">
-<h1 class="display-5">Student Marks</h1>
-</div>
+<div class="disp">
+<h2>STUDENT SCORES</h2>
 @if (TempData["AlertMessage"] != null)
 {
     <div class="alert alert-success">
@@ -28,15 +27,16 @@
         @foreach (var grade in Model)
         {
             <tr>
-                <td>@grade.GID</td>
+                <td>@grade.GradeID</td>
                 <td>@grade.StudentID</td>
                 <td>@grade.CourseID</td>
                 <td>@grade.Score</td>
 
                 <td>
-                    <a class="btn btn-primary" asp-controller="Grades" asp-action="EditList" asp-route-gid="@grade.GID">EDIT</a>
+                    <a class="btn btn-primary" asp-controller="Grades" asp-action="EditList" asp-route-gid="@grade.GradeID">EDIT</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+</div>

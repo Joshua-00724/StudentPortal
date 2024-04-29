@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http.Features;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using StudentPortal.Data;
 using StudentPortal.Models;
 using StudentPortal.Models.Entities;
+using System.Reflection.Metadata.Ecma335;
 
 namespace StudentPortal.Controllers
 {
@@ -17,26 +20,76 @@ namespace StudentPortal.Controllers
         [HttpGet]
         public IActionResult Addgrade()
         {
+            
+          /*  AddCourseViewModel model = new AddCourseViewModel();
+            model.Courselistt = new List<SelectListItem>();
+            var courselist = dbContext.Courses.ToList();
+            model.Courselistt.Add(new SelectListItem
+            {
+                Text = "Select The Course",
+                Value = ""
+            });
+            foreach (var item in courselist)
+            {
+                model.Courselistt.Add(new SelectListItem
+                {
+                    Text = item.CourseName,
+                    Value = Convert.ToString(item.CourseID)
+                });
+            }*/
+           
             return View();
         }
+
+       
 
         [HttpPost]
         public async Task<IActionResult> Addgrade(AddGradeViewModel viewModel)
         {
             ModelState.Clear();
-            var grades = new Grade
+         /* AddCourseViewModel model = new AddCourseViewModel();
+            model.Courselistt = new List<SelectListItem>();
+          var courselist = dbContext.Courses.ToList();
+            model.Courselistt.Add(new SelectListItem{
+                Text = "Select The Course",
+                Value = ""
+            });
+            foreach(var item in courselist)
             {
-                GID = viewModel.GID,
-                StudentID = viewModel.StudentID,
-                CourseID = viewModel.CourseID,
-                Score = viewModel.Score,    
-            };
-            await dbContext.Grades.AddAsync(grades);
-            await dbContext.SaveChangesAsync();
-            TempData["AlertMessage"] = "Student has been graded";
+                model.Courselistt.Add(new SelectListItem
+                {
+                    Text = item.CourseName,
+                    Value = Convert.ToString(item.CourseID)
+                });
+            }*/
+            //model.Courseslist.Add(new SelectListItem
+         /*   ViewBag.Value = model.CourseID;
+            ViewBag.Text = model.Courselistt.Where(x => x.Value == model.CourseID.ToString()).
+            FirstOrDefault().Text;
+*/
+            var grades = new Grade
+                {
+                    GradeID = viewModel.GradeID,
+                    StudentID = viewModel.StudentID,
+                    CourseID = viewModel.CourseID,
+            //CourseID = viewModel.CourseID,
+            /*Course.ReferenceEquals(courselist) = dbContext.Courses.Select(c => new AddCourseViewModel
+             {
+                 CourseID = c.CourseID,
+                 CourseName = c.CourseName,
+             }).ToList(),
+*/
+           
+            Score = viewModel.Score,
+                };
+                await dbContext.Grades.AddAsync(grades);
+                await dbContext.SaveChangesAsync();
+                TempData["AlertMessage"] = "Student has been graded";
 
             return View();
         }
+
+   
 
         [HttpGet]
 
@@ -58,12 +111,12 @@ namespace StudentPortal.Controllers
         [HttpPost]
         public async Task<IActionResult> EditList(Grade viewModel)
         {
-            var grades = await dbContext.Grades.FindAsync(viewModel.GID);
+            var grades = await dbContext.Grades.FindAsync(viewModel.GradeID);
 
             if (grades is not  null) 
             {
                 grades.StudentID = viewModel.StudentID;
-                grades.CourseID = viewModel.CourseID;
+                
                 grades.Score = viewModel.Score;
 
                 await dbContext.SaveChangesAsync();
@@ -78,7 +131,7 @@ namespace StudentPortal.Controllers
 
         public async Task<IActionResult> Delete(Grade viewModel)
         {
-            var student = await dbContext.Grades.AsNoTracking().FirstOrDefaultAsync(a => a.GID == viewModel.GID);
+            var student = await dbContext.Grades.AsNoTracking().FirstOrDefaultAsync(a => a.GradeID == viewModel.GradeID);
 
             if (student is not null)
             {

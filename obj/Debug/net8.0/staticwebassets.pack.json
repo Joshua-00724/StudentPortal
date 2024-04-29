@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\StudentPortal.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\StyleSheet.scss",
-      "PackagePath": "staticwebassets\\css\\StyleSheet.scss"
-    },
-    {
       "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -247,6 +243,46 @@
     {
       "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\sass\\_header.scss",
+      "PackagePath": "staticwebassets\\sass\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\sass\\_typo.scss",
+      "PackagePath": "staticwebassets\\sass\\_typo.scss"
+    },
+    {
+      "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\sass\\image2.jpg",
+      "PackagePath": "staticwebassets\\sass\\image2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\sass\\image3.jpg",
+      "PackagePath": "staticwebassets\\sass\\image3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\sass\\image4.jpg",
+      "PackagePath": "staticwebassets\\sass\\image4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\sass\\image5.jpg",
+      "PackagePath": "staticwebassets\\sass\\image5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\sass\\img.jpg",
+      "PackagePath": "staticwebassets\\sass\\img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\sass\\styleportal.css",
+      "PackagePath": "staticwebassets\\sass\\styleportal.css"
+    },
+    {
+      "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\sass\\styleportal.min.css",
+      "PackagePath": "staticwebassets\\sass\\styleportal.min.css"
+    },
+    {
+      "Id": "C:\\Users\\joshu\\source\\repos\\StudentPortal\\StudentPortal\\wwwroot\\sass\\styleportal.scss",
+      "PackagePath": "staticwebassets\\sass\\styleportal.scss"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.StudentPortal.Microsoft.AspNetCore.StaticWebAssets.props",

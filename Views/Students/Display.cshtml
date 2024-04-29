@@ -4,19 +4,26 @@
 @{
 }
 @model List<StudentPortal.Models.Entities.Student>
-<div class="text-center">
-<h1 class="display-5">All Students</h1>
+@* <div class="text-center">
+<h1>All Students</h1>
 </div>
 <a class="btn btn-success" asp-controller="Students" asp-action="Add">+ ADD</a>
 <br />
 <br />
-
+ *@
 @if (TempData["AlertMessage"] != null)
 {
     <div class="alert alert-success">
         <strong>Success!</strong> @TempData["AlertMessage"]
     </div>
 } 
+<div class="dispp">
+    <h1>ALL STUDENTS</h1>
+
+<a class="btn btn-success" asp-controller="Students" asp-action="Add">+ ADD</a>
+<br />
+<br />
+
 <table class="table table-success table-striped">
     <thead>
         <tr>
@@ -36,11 +43,11 @@
         {
             <tr>
              <td>@student.StudentID</td>
-             <td>@student.FName</td>
-             <td>@student.LName</td>
+             <td>@student.FirstName</td>
+             <td>@student.LastName</td>
              <td>@student.Email</td>
              <td>@student.Gender</td>
-             <td>@student.Phone</td>
+             <td>@student.PhoneNumber</td>
              <td>@student.Address</td>
              <td>@student.BirthDate</td>
              <td>
@@ -50,3 +57,4 @@
         }
     </tbody>
 </table>
+</div>

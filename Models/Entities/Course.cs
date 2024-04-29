@@ -7,10 +7,12 @@ namespace StudentPortal.Models.Entities
     {
         [Key]
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CourseID { get; set; }
-        
+
+        [Required(ErrorMessage = "Enter the Course Name")]
+        [StringLength(50)]
         public string CourseName {  get; set; }
+
         public ICollection<Grade> Grades { get; set; }
     }
 }

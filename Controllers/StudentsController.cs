@@ -29,14 +29,18 @@ namespace StudentPortal.Controllers
             var student = new Student
             {
                 StudentID = viewModel.StudentID,
-                FName = viewModel.FName,
-                LName = viewModel.LName,
+                FirstName = viewModel.FirstName,
+                LastName = viewModel.LastName,
                 Email = viewModel.Email,
                 Gender = viewModel.Gender,
-                Phone = viewModel.Phone,
+                PhoneNumber = viewModel.PhoneNumber,
                 Address = viewModel.Address,
                 BirthDate = viewModel.BirthDate,
             };
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             await dbContext.Students.AddAsync(student);
             await dbContext.SaveChangesAsync();
 
@@ -69,11 +73,11 @@ namespace StudentPortal.Controllers
 
             if (student is not null)
             {
-                student.FName = viewModel.FName;
-                student.LName = viewModel.LName;   
+                student.FirstName = viewModel.FirstName;
+                student.LastName = viewModel.LastName;   
                 student.Email = viewModel.Email;
                 student.Gender = viewModel.Gender;
-                student.Phone = viewModel.Phone;
+                student.PhoneNumber = viewModel.PhoneNumber;
                 student.Address = viewModel.Address;
                 student.BirthDate = viewModel.BirthDate;
 

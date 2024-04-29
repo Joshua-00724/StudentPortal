@@ -5,7 +5,6 @@
 }
 
 @model StudentPortal.Models.Entities.Student
-<h1>Edit Student</h1>
 
 @if (TempData["AlertMessage"] != null)
 {
@@ -21,24 +20,28 @@
 else
 {
  
-<form class="row g-3" method="post">
+<form class="editstu row g-3" method="post">
+    <div>
+        <h2>EDIT STUDENT</h2>
+        </div>
     <div class="col-md-6">
+            
         <label for="inputName" class="form-label">Student ID</label>
         <input type="number" class="form-control" id="sid" asp-for="StudentID" readonly/>
     </div>
     <div class="col-md-6">
         <label for="inputFirstName" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="fname" asp-for="FName" />
+        <input type="text" class="form-control" id="fname" asp-for="FirstName" />
     </div>
-    <div class="col-12">
+    <div class="col-md-6">
         <label for="inputLastName" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="lname" asp-for="LName" />
+        <input type="text" class="form-control" id="lname" asp-for="LastName" />
     </div>
-    <div class="col-12">
+    <div class="col-md-6">
         <label for="inputEmail" class="col-sm-2 col-form-label">Email Address</label>
-        <div class="col-sm-10">
+       @*  <div class="col-sm-10"> *@
             <input type="email" class="form-control" id="Email" asp-for="Email" />
-        </div>
+        @* /div> *@
     </div>
     <p> </p>
     <fieldset class="row mb-3">
@@ -61,21 +64,21 @@ else
     </fieldset>
     <div class="col-md-6">
         <label for="inputPhone" class="form-label">Phone No.</label>
-        <input type="number" class="form-control" id="phone" asp-for="Phone">
+        <input type="number" class="form-control" id="phone" asp-for="PhoneNumber">
     </div>
     <div class="col-md-6">
         <label for="inputAddress" class="form-label">Address</label>
         <input type="text" class="form-control" id="address" asp-for="Address" />
     </div>
-    <div class="col-md-12">
+    <div class="col-md-4 align-content-center">
         <label for="inputBirth" class="form-label">Birth Date</label>
         <input type="date" class="form-control" id="indate" asp-for="BirthDate">
     </div>
 
     <div class="col-12">
-        <button type="submit" class="btn btn-primary">SAVE</button>
+        <button type="submit" class="btn btn-primary align-content-between">SAVE</button>
     
-        <button type="submit" class="btn btn-danger ms-3" asp-action="Delete" asp-controller="Students">DELETE</button>
+        <button type="submit" class="btn btn-danger ms-3 align-content-md-between" asp-action="Delete" asp-controller="Students">DELETE</button>
       </div>     
 </form>
 }

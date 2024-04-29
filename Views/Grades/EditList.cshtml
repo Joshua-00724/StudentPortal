@@ -5,7 +5,7 @@
 }
 @model StudentPortal.Models.Entities.Grade
 
-<h1> Edit Scores</h1>
+
 
 @if (TempData["AlertMessage"] != null)
 {
@@ -21,27 +21,35 @@
 
 else
 {
-    <form class="row g-3" method="post">
-        <div class="col-md-6">
+
+   
+    <form class="editform" method="post">
+        <h2> EDIT SCORES</h2>
+        
+        <div class="col-md-4">
             <label for="inputGrades" class="form-label">Grade ID</label>
-            <input type="number" class="form-control" id="gid" asp-for="GID" readonly/>
-        </div>
-        <div class="col-md-6">
+            <input type="number" class="form-control" id="gid" asp-for="GradeID" readonly/>
+       </div>
+        <div class="col-md-4">
             <label for="inputSID" class="form-label">Student ID</label>
             <input type="number" class="form-control" id="sid" asp-for="StudentID" readonly/>
         </div>
-        <div class="col-md-12">
-            <label for="inputcid" class="form-label">Course ID</label>
+        
+        <div class="col-md-4">
+            <label for="inputCID" class="form-label">CourseID</label>
             <input type="number" class="form-control" id="cid" asp-for="CourseID" required />
         </div>
-        <div class="col-md-12">
+        
+        <div class="col-md-4">
             <label for="inputScore" class="form-label">Score</label>
             <input type="number" class="form-control" id="score" asp-for="Score" required />
         </div>
-
+        <br />
+        <br />
         <div>
-            <button type="submit" class="btn btn-primary">Save</button>
-          <button type="submit" class="btn btn-danger ms-3" asp-action="Delete" asp-controller="Grades">DELETE</button> 
+            <button type="submit" class="gradebtn btn btn-primary">SAVE</button>
+          <button type="submit" class="gradebtn btn btn-danger ms-3" asp-action="Delete" asp-controller="Grades">DELETE</button> 
         </div>
     </form>
+    
 }
