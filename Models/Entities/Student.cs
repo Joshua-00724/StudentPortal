@@ -25,10 +25,7 @@ namespace StudentPortal.Models.Entities
         [Required(ErrorMessage = "Select your Gender")]
         [StringLength(10)]
         public string Gender { get; set; }
-
-        [Required(ErrorMessage = "Phone number is required")]
-        [DataType(DataType.PhoneNumber)]
-        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Invalid phone number format")]
+        
         public string PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "Enter your Home Address")]

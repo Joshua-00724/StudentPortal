@@ -26,35 +26,35 @@ else
         </div>
     <div class="col-md-6">
             
-        <label for="inputName" class="form-label">Student ID</label>
+        <label for="inputName" class="form-label">STUNDENT ID</label>
         <input type="number" class="form-control" id="sid" asp-for="StudentID" readonly/>
     </div>
     <div class="col-md-6">
-        <label for="inputFirstName" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="fname" asp-for="FirstName" />
+        <label for="inputFirstName" class="form-label">FIRST NAME</label>
+        <input type="text" class="form-control" id="fname" asp-for="FirstName" required/>
     </div>
     <div class="col-md-6">
-        <label for="inputLastName" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="lname" asp-for="LastName" />
+        <label for="inputLastName" class="form-label">LAST NAME</label>
+        <input type="text" class="form-control" id="lname" asp-for="LastName" required/>
     </div>
     <div class="col-md-6">
-        <label for="inputEmail" class="col-sm-2 col-form-label">Email Address</label>
+        <label for="inputEmail" class="col-sm-2 col-form-label">EMAIL ADDRESS</label>
        @*  <div class="col-sm-10"> *@
             <input type="email" class="form-control" id="Email" asp-for="Email" />
         @* /div> *@
     </div>
     <p> </p>
     <fieldset class="row mb-3">
-        <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+        <legend class="col-form-label col-sm-2 pt-0">GENDER</legend>
         <div class="col-sm-10">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="Gender" id="gridRadios1" value="Male" checked>
+                <input class="form-check-input" type="radio" asp-for="Gender" id="gridRadios1" value="Male" required>
                 <label class="form-check-label" for="gridRadios1">
                     Male
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="Gender" id="gridRadios2" value="Female">
+                <input class="form-check-input" type="radio" asp-for="Gender" id="gridRadios2" value="Female" required>
                 <label class="form-check-label" for="gridRadios2">
                     Female
                 </label>
@@ -63,16 +63,17 @@ else
         </div>
     </fieldset>
     <div class="col-md-6">
-        <label for="inputPhone" class="form-label">Phone No.</label>
-        <input type="number" class="form-control" id="phone" asp-for="PhoneNumber">
+        <label for="inputPhone" class="form-label">PHONE NO.</label>
+            <input type="tel" class="form-control" id="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" title="Enter 10 digits for Phone Number"
+            asp-for="PhoneNumber" required>
     </div>
     <div class="col-md-6">
-        <label for="inputAddress" class="form-label">Address</label>
-        <input type="text" class="form-control" id="address" asp-for="Address" />
+        <label for="inputAddress" class="form-label">ADDRESS</label>
+        <input type="text" class="form-control" id="address" asp-for="Address" required/>
     </div>
     <div class="col-md-4 align-content-center">
-        <label for="inputBirth" class="form-label">Birth Date</label>
-        <input type="date" class="form-control" id="indate" asp-for="BirthDate">
+        <label for="inputBirth" class="form-label">BIRTH DATE</label>
+        <input type="date" class="form-control" id="indate" asp-for="BirthDate" required/>
     </div>
 
     <div class="col-12">

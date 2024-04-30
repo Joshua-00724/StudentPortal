@@ -135,3 +135,8 @@ C:\Users\joshu\source\repos\StudentPortal\StudentPortal\obj\Debug\net8.0\refint\
 C:\Users\joshu\source\repos\StudentPortal\StudentPortal\obj\Debug\net8.0\StudentPortal.pdb
 C:\Users\joshu\source\repos\StudentPortal\StudentPortal\obj\Debug\net8.0\StudentPortal.genruntimeconfig.cache
 C:\Users\joshu\source\repos\StudentPortal\StudentPortal\obj\Debug\net8.0\ref\StudentPortal.dll
+C:\Users\joshu\source\repos\StudentPortal\StudentPortal\bin\Debug\net8.0\Antlr3.Runtime.dll
+C:\Users\joshu\source\repos\StudentPortal\StudentPortal\bin\Debug\net8.0\System.Web.Optimization.dll
+C:\Users\joshu\source\repos\StudentPortal\StudentPortal\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll
+C:\Users\joshu\source\repos\StudentPortal\StudentPortal\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\joshu\source\repos\StudentPortal\StudentPortal\bin\Debug\net8.0\WebGrease.dll

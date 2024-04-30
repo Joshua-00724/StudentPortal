@@ -2,6 +2,15 @@
     font-size: 16px;
 }
 
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+}
 form.row{
     background-color: #4cff0069;
     width: 850px;
@@ -15,12 +24,29 @@ form.row{
     color: #000000;
  }
 
-
+// COURSE - Add Course
 .super
 {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+   
+}
 
+form.Join {
+    background-color: #4cff0069;
+    width: 360px;
+    height: 300px;
+    position: center;
+    margin: 4% auto;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    align-items: center;
+    align-content: space-evenly;
+}
+label.form-label{
+    font-size: 19px;
 }
 
 .inputCourseName
@@ -35,6 +61,7 @@ div.form
     font-size: 20px;
 
 }
+
 // GRADES - Display
 div.disp 
 {
@@ -51,7 +78,7 @@ div.grade
 {
     background-color: #4cff007f;
     padding: 10px 10px;
-    width: 380px;
+    width: 360px;
     height: 360px;
     margin: 4% auto;
     font-family: sans-serif;
@@ -122,33 +149,10 @@ button.gradebtn {
     
 }
 
-
-
-
-
-form.Join {
-    background-color: #4cff0069;
-    width: 300px;
-    height: 300px;
-    position: center;
-    margin: 4% auto;
-    padding: 10px;
-    overflow: hidden;
-    font-family: sans-serif;
-    font-weight: bold;
-    color: #000000;
-    text-align: center;
-    align-items: center;
- }
-
-h1{
-    text-align: center;
-    
-    }
-
-h2{
-    text-align: center;
-    font-family: sans-serif;
-    font-weight: bold;
-    
+input.form-check-input
+{
+    font-size: 17px;
+   
 }
+
+

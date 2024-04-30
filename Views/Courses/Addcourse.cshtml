@@ -20,10 +20,12 @@
         <label for="inputCourse" class="form-label">Course ID</label>
         <input type="number" class="form-control" id="sid" asp-for="CourseID" required/>
     </div> *@
-    <div class="col-md-12">
-        <label for="inputCourseName" class="form-label">Course Name</label>
-        <input type="text" class="form-control" id="fname" asp-for="CourseName" required/>
+    <div class="col-md-4">
+        <label for="inputCourseName" class="form-label">COURSE NAME</label>
+        <input type="text" class="form-control" id="fname" asp-for="CourseName" placeholder="Enter Course Name" required/>
+            @Html.ValidationMessageFor(model => model.CourseName, "", new { @class = "text-danger" })
     </div>
+    <br />
     <div>
         <button type="submit" class="btn btn-primary">ADD</button>
     </div>

@@ -179,6 +179,10 @@ div.btn {
   float: right;
 }
 
+legend.col-md-3 {
+  font-size: 20px;
+}
+
 form.editstu {
   background-color: rgba(76, 255, 0, 0.4117647059);
   width: 900px;
@@ -196,6 +200,16 @@ html {
   font-size: 16px;
 }
 
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
 form.row {
   background-color: rgba(76, 255, 0, 0.4117647059);
   width: 850px;
@@ -211,7 +225,25 @@ form.row {
 
 .super {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+}
+
+form.Join {
+  background-color: rgba(76, 255, 0, 0.4117647059);
+  width: 360px;
+  height: 300px;
+  position: center;
+  margin: 4% auto;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  align-items: center;
+  align-content: space-evenly;
+}
+
+label.form-label {
+  font-size: 19px;
 }
 
 .inputCourseName {
@@ -236,7 +268,7 @@ div.disp {
 div.grade {
   background-color: rgba(76, 255, 0, 0.4980392157);
   padding: 10px 10px;
-  width: 380px;
+  width: 360px;
   height: 360px;
   margin: 4% auto;
   font-family: sans-serif;
@@ -296,27 +328,6 @@ button.gradebtn {
   position: center;
 }
 
-form.Join {
-  background-color: rgba(76, 255, 0, 0.4117647059);
-  width: 300px;
-  height: 300px;
-  position: center;
-  margin: 4% auto;
-  padding: 10px;
-  overflow: hidden;
-  font-family: sans-serif;
-  font-weight: bold;
-  color: #000000;
-  text-align: center;
-  align-items: center;
-}
-
-h1 {
-  text-align: center;
-}
-
-h2 {
-  text-align: center;
-  font-family: sans-serif;
-  font-weight: bold;
+input.form-check-input {
+  font-size: 17px;
 }
