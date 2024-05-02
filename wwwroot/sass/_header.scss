@@ -17,6 +17,23 @@ a
 {
     color: blue;
 }
+
+
+//Privacy Page
+
+div.privacy {
+    background-color: #4cff00b5;
+    width: 600px;
+    height: 550px;
+    position: center;
+    margin: 3% auto;
+    padding: 10px;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
 // LAYOUT PAGE
 a.nav-link
 {
@@ -29,11 +46,11 @@ a.navbar-brand{
 
 a.navbar-brand:hover
 {
-    color: firebrick;
+    color: deepskyblue;
 }
 a.nav-link:hover
 {
-color: firebrick;
+color: deepskyblue;
 }
 
 

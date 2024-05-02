@@ -10,7 +10,7 @@ namespace StudentPortal.Models
         public int CourseID {  get; set; }   
         public string CourseName { get; set; }
 
-       public List<SelectListItem> Courselistt { get; set; }
+       //public List<SelectListItem> Courselistt { get; set; }
 
 
         /*        private static AddCourseViewModel _instance = new AddCourseViewModel();

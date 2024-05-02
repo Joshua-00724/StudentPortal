@@ -16,11 +16,11 @@ namespace StudentPortal.Models
 
         public decimal Score { get; set; }
 
-        public List<Course> Courselistt { get; set; }
+        /*public List<Course> Courselistt { get; set; }
 
         public AddGradeViewModel()
         {
             this.Courselistt = new List<Course>();
-        }
+        }*/
     }
 }

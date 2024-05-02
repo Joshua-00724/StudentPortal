@@ -17,6 +17,18 @@ a {
   color: blue;
 }
 
+div.privacy {
+  background-color: rgba(76, 255, 0, 0.7098039216);
+  width: 600px;
+  height: 550px;
+  position: center;
+  margin: 3% auto;
+  padding: 10px;
+  overflow: hidden;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
 a.nav-link {
   color: black;
 }
@@ -26,11 +38,11 @@ a.navbar-brand {
 }
 
 a.navbar-brand:hover {
-  color: firebrick;
+  color: deepskyblue;
 }
 
 a.nav-link:hover {
-  color: firebrick;
+  color: deepskyblue;
 }
 
 li {
